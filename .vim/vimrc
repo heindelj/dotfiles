@@ -1,0 +1,38 @@
+:set number relativenumber
+:set clipboard=unnamedplus
+
+let g:dracula_italic = 0
+packadd! dracula
+syntax enable
+colorscheme dracula
+
+" Line number highlighting
+highlight LineNr term=bold cterm=NONE ctermfg=blue gui=NONE guifg=DarkGrey guibg=NONE
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" " when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" " On pressing tab, insert 4 spaces
+set expandtab
+
+"Cursor thin in insert mode
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+
+"So I can move around in insert
+inoremap <C-k> <C-o>gk
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-j> <C-o>gj
+set term=screen-256color
+
+"Remap tab to gt in normal mode for tab moving
+:nnoremap <tab> gt
+:nnoremap <S-Tab> gT
+
+execute pathogen#infect()
+
