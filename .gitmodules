@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/terminus"]
 	path = .vim/bundle/terminus
 	url = https://github.com/wincent/terminus.git
+[submodule "dracula"]
+	path = dracula
+	url = https://github.com/dracula/vim.git
