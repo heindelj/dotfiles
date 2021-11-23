@@ -1,5 +1,6 @@
-:set number relativenumber
-:set clipboard=unnamedplus
+set number relativenumber
+set clipboard=unnamedplus
+set mouse-=a
 
 let g:dracula_italic = 0
 packadd! dracula
@@ -24,15 +25,32 @@ if $TERM_PROGRAM =~ "iTerm"
 endif
 
 "So I can move around in insert
-inoremap <C-k> <C-o>gk
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-inoremap <C-j> <C-o>gj
+"inoremap <C-k> <C-o>gk
+"inoremap <C-h> <Left>
+"inoremap <C-l> <Right>
+"inoremap <C-j> <C-o>gj
 set term=screen-256color
 
 "Remap tab to gt in normal mode for tab moving
 :nnoremap <tab> gt
 :nnoremap <S-Tab> gT
 
-execute pathogen#infect()
+"Fix the ctrl arrow keys with wezterm
+map <ESC>[1;5C <C-Right>
+map <ESC>[1;5D <C-Left>
+map <ESC>[1;5B <C-Down>
+map <ESC>[1;5A <C-Up>
 
+"Remap buffer navigation and resizing to ctrl-arrow keys rather than
+"<ctrl-w><arrow key>
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
+
+:let &winheight = &lines * 7 / 10
+:let &winwidth = &columns * 7 / 10
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
