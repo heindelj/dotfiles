@@ -51,6 +51,26 @@ nnoremap <silent> <C-Down> <c-w>j
 :let &winheight = &lines * 7 / 10
 :let &winwidth = &columns * 7 / 10
 
+"Make escape switch to normal mode when terminal is open
+:tnoremap <Esc> <C-\><C-n>
+
+"Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 1
+
+" Taken from https://github.com/rust-lang/rust.vim/issues/130
+"let g:syntastic_rust_rustc_exe = 'cargo check'
+"let g:syntastic_rust_rustc_fname = ''
+"let g:syntastic_rust_rustc_args = '--'
+let g:syntastic_rust_checkers = ['rustc']
+
 execute pathogen#infect()
-syntax on
+syntax enable
 filetype plugin indent on
