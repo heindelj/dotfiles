@@ -1,18 +1,3 @@
-[submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/julia-vim"]
-	path = .vim/bundle/julia-vim
-	url = https://github.com/JuliaEditorSupport/julia-vim.git
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/terminus"]
-	path = .vim/bundle/terminus
-	url = https://github.com/wincent/terminus.git
 [submodule "dracula"]
 	path = dracula
-	url = https://github.com/dracula/vim.git
-[submodule ".vim/pack/themes/start/dracula"]
-	path = .vim/pack/themes/start/dracula
 	url = https://github.com/dracula/vim.git
