@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias cori='ssh heindelj@cori.nersc.gov'
+alias perlmutter='ssh heindelj@perlmutter-p1.nersc.gov'
 # Wally is a cat then OTP
 alias lawrencium='ssh heindelj@lrc-login.lbl.gov'
 # pin then OTP
@@ -120,7 +121,7 @@ alias savio='ssh heindelj@hpc.brc.berkeley.edu'
 # great security!
 alias pitzer='ssh heindelj@pitzer.cchem.berkeley.edu'
 #alias scp='noglob scp'
-alias vi='/snap/bin/nvim'
+alias vi='/usr/bin/nvim'
 
 alias gcc='/usr/bin/gcc-10'
 alias g++='/usr/bin/g++-10'
